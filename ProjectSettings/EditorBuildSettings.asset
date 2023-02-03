@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/levels/eternia1.unity
     guid: 24c976068a9c718469bf59d2d07e7477
+  - enabled: 1
+    path: Assets/Scenes/levels/eternia2.unity
+    guid: 75735f403b55b15498741b97a2ca36d4
   m_configObjects: {}

@@ -90,6 +90,8 @@ public class CharacterController2D : MonoBehaviour
         animatorJumpTrigger = Animator.StringToHash("Jump");
 
         CanMove = true;
+
+        this.transform.position = Player.Instance.entrancePosition ?? this.transform.position;
     }
 
     void Update()
