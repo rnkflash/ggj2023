@@ -1,6 +1,8 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.iOS;
 
 public enum GroundType
 {
@@ -18,14 +20,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] Animator animator = null;
     [SerializeField] Transform puppet = null;
     [SerializeField] CharacterAudio audioPlayer = null;
+    [SerializeField] Transform _attackPoint;
 
-    [Header("Tail")]
-    [SerializeField] Transform tailAnchor = null;
-    [SerializeField] Rigidbody2D tailRigidbody = null;
-
-    [Header("Equipment")]
-    [SerializeField] Transform handAnchor = null;
-    [SerializeField] UnityEngine.U2D.Animation.SpriteLibrary spriteLibrary = null;
 
     [Header("Movement")]
     [SerializeField] float acceleration = 0.0f;
@@ -44,18 +40,41 @@ public class CharacterController2D : MonoBehaviour
 
     private Vector2 movementInput;
     private bool jumpInput;
+    private bool _attackInput;
 
     private Vector2 prevVelocity;
     private GroundType groundType;
     private bool isFlipped;
     private bool isJumping;
     private bool isFalling;
+    private bool _isDEAD;
 
     private int animatorGroundedBool;
     private int animatorRunningSpeed;
     private int animatorJumpTrigger;
 
+    private float _attackCooldown;
+    private float _attackDamage;
+    float t;
+
+    private float _hp;
+
     public bool CanMove { get; set; }
+    public float HP {
+        get => _hp;
+        set
+        {
+            if (_hp < 0)
+            {
+                _isDEAD = true;
+            }
+            else
+            {
+                _hp = value;
+            } 
+        }
+        
+    }
 
     void Start()
     {
@@ -92,6 +111,7 @@ public class CharacterController2D : MonoBehaviour
         CanMove = true;
 
         this.transform.position = Player.Instance.entrancePosition ?? this.transform.position;
+        puppet.localScale = flippedScale;
     }
 
     void Update()
@@ -115,6 +135,12 @@ public class CharacterController2D : MonoBehaviour
         if (!isJumping && keyboard.spaceKey.wasPressedThisFrame) {
             jumpInput = true;
         }
+        
+        if (Mouse.current.leftButton.isPressed)
+            _attackInput = true;
+           
+
+        t = Time.deltaTime;
     }
 
     void FixedUpdate()
@@ -123,11 +149,28 @@ public class CharacterController2D : MonoBehaviour
         UpdateVelocity();
         UpdateDirection();
         UpdateJump();
-        UpdateTailPose();
+        //UpdateTailPose();
         UpdateGravityScale();
 
         prevVelocity = controllerRigidbody.velocity;
     }
+    private void UpdateDeath()
+    {
+        //animator
+        //Destroy
+    }
+    private void UpdateAttack()
+    {
+        if (_attackInput == true && t > _attackCooldown)
+        {
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_attackPoint.position, 0.5f); // add layer mask
+            foreach (var enemy in hitColliders)
+            {
+                //enemy.gameObject.Health = -_attackDamage; Add to enemy health
+            }         
+        }
+    }
+
 
     private void UpdateGrounding()
     {
@@ -219,27 +262,15 @@ public class CharacterController2D : MonoBehaviour
         if (controllerRigidbody.velocity.x > minFlipSpeed && isFlipped)
         {
             isFlipped = false;
-            puppet.localScale = Vector3.one;
+            puppet.localScale = flippedScale;
         }
         else if (controllerRigidbody.velocity.x < -minFlipSpeed && !isFlipped)
         {
             isFlipped = true;
-            puppet.localScale = flippedScale;
+            puppet.localScale = Vector3.one;
         }
     }
 
-    private void UpdateTailPose()
-    {
-        // Calculate the extrapolated target position of the tail anchor.
-        Vector2 targetPosition = tailAnchor.position;
-        targetPosition += controllerRigidbody.velocity * Time.fixedDeltaTime;
-
-        tailRigidbody.MovePosition(targetPosition);
-        if (isFlipped)
-            tailRigidbody.SetRotation(tailAnchor.rotation * flippedRotation);
-        else
-            tailRigidbody.SetRotation(tailAnchor.rotation);
-    }
 
     private void UpdateGravityScale()
     {
@@ -253,18 +284,5 @@ public class CharacterController2D : MonoBehaviour
         }
 
         controllerRigidbody.gravityScale = gravityScale;
-    }
-
-    public void GrabItem(Transform item)
-    {
-        // Attach item to hand
-        item.SetParent(handAnchor, false);
-        item.localPosition = Vector3.zero;
-        item.localRotation = Quaternion.identity;
-    }
-
-    public void SwapSprites(UnityEngine.U2D.Animation.SpriteLibraryAsset spriteLibraryAsset)
-    {
-        spriteLibrary.spriteLibraryAsset = spriteLibraryAsset;
     }
 }
