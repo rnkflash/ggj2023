@@ -15,12 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/win.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/newlevels/map.unity
+    guid: 2ebea53f60998f045bcdee2f22f421c1
+  - enabled: 1
     path: Assets/Scenes/newlevels/level1.unity
     guid: f5420b4d387a5444f999d4739ef7373a
   - enabled: 1
     path: Assets/Scenes/newlevels/level2.unity
     guid: cfefa55ac7f2d1641971d8c6ba819b65
   - enabled: 1
-    path: Assets/Scenes/newlevels/map.unity
-    guid: 2ebea53f60998f045bcdee2f22f421c1
+    path: Assets/Scenes/newlevels/down.unity
+    guid: b9d6d3fdd74ba4f4eb71204ed5a2c218
+  - enabled: 1
+    path: Assets/Scenes/newlevels/downleft.unity
+    guid: fa1dcdab3f352cd488af01a22810a48d
   m_configObjects: {}
