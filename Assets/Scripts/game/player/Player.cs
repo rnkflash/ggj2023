@@ -6,4 +6,9 @@ public class Player : Singleton<Player>
 {
     public string map;
     public Vector3? entrancePosition = null;
+
+    public void ResetProgress() {
+        map = null;
+        entrancePosition = null;
+    }
 }

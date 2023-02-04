@@ -11,6 +11,7 @@ public class SceneController : Singleton<SceneController>
 
 	public async void LoadMainMenu()
 	{
+		Player.Instance.ResetProgress();
 		await LoadSceneAsync("menu", LoadSceneMode.Single);
 	}
 
