@@ -6,7 +6,7 @@ public class Wormie : MonoBehaviour
 {
     private Transform player;
 
-	public bool isFlipped = false;
+	private bool isFlipped = false;
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
