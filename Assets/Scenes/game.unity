@@ -2020,7 +2020,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 02b6e17d7c65ccf478fd58b3375c6258, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6541,3 +6541,60 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1001 &4868093306328550899
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4868093306707682360, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_Name
+      value: Enemy_wormie
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.047498208
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868093306707682367, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff7ba94d3ab72b342b130e577f42d1e6, type: 3}
