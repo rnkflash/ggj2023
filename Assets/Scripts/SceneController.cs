@@ -16,7 +16,7 @@ public class SceneController : Singleton<SceneController>
 
 	public async void LoadGameplay()
 	{
-		await LoadSceneAsync("game", LoadSceneMode.Single);
+		await LoadSceneAsync("level2", LoadSceneMode.Single);
 	}
 
 	private async Task LoadSceneAsync(string sceneName, LoadSceneMode mode)

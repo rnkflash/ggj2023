@@ -12,18 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: ea4d3dbfa396e95459fe8e059e981f0b
   - enabled: 1
-    path: Assets/Scenes/game.unity
-    guid: 59213c47aadf6ad41891702476e51b20
-  - enabled: 1
     path: Assets/Scenes/win.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/levels/map.unity
-    guid: 5aee2edac20672b42ae2e33cf289402f
+    path: Assets/Scenes/newlevels/level1.unity
+    guid: f5420b4d387a5444f999d4739ef7373a
   - enabled: 1
-    path: Assets/Scenes/levels/eternia1.unity
-    guid: 24c976068a9c718469bf59d2d07e7477
+    path: Assets/Scenes/newlevels/level2.unity
+    guid: cfefa55ac7f2d1641971d8c6ba819b65
   - enabled: 1
-    path: Assets/Scenes/levels/eternia2.unity
-    guid: 75735f403b55b15498741b97a2ca36d4
+    path: Assets/Scenes/newlevels/map.unity
+    guid: 2ebea53f60998f045bcdee2f22f421c1
   m_configObjects: {}

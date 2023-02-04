@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 527190160}
   - component: {fileID: 527190162}
   m_Layer: 0
-  m_Name: eternia2
+  m_Name: level2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,8 +185,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1315985012}
   - {fileID: 1093492710}
-  - {fileID: 1627359707}
   m_Father: {fileID: 323979559}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687126497}
   m_Layer: 0
-  m_Name: eternia1
+  m_Name: level1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,7 +232,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1686044793}
-  - {fileID: 2093401094}
+  - {fileID: 1931847524}
   m_Father: {fileID: 323979559}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -261,12 +261,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093492709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.4007, y: 1.8, z: 0}
-  m_LocalScale: {x: 60.45717, y: 23.66231, z: 1}
+  m_LocalPosition: {x: -93.7769, y: 5.1163, z: 0}
+  m_LocalScale: {x: 50.711308, y: 29.262417, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 527190160}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1093492711
 SpriteRenderer:
@@ -320,7 +320,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1627359706
+--- !u!1 &1315985011
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,9 +328,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1627359707}
-  - component: {fileID: 1627359709}
-  - component: {fileID: 1627359708}
+  - component: {fileID: 1315985012}
+  - component: {fileID: 1315985014}
+  - component: {fileID: 1315985013}
   m_Layer: 0
   m_Name: LevelBounds
   m_TagString: Untagged
@@ -338,48 +338,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1627359707
+--- !u!4 &1315985012
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627359706}
+  m_GameObject: {fileID: 1315985011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16999817, y: 0.020000458, z: 2.395942}
+  m_LocalPosition: {x: -113.43385, y: 0.7324619, z: 2.395942}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 527190160}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1627359708
+--- !u!114 &1315985013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627359706}
+  m_GameObject: {fileID: 1315985011}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41e449fad61cc714288c328ac4364a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: eternia2
---- !u!61 &1627359709
+  level: level2
+--- !u!61 &1315985014
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627359706}
+  m_GameObject: {fileID: 1315985011}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 23.035263, y: 1.5778255}
+  m_Offset: {x: 19.360622, y: 4.3559303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -390,7 +390,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 61.133736, y: 25.09771}
+  m_Size: {x: 50.185135, y: 29.06643}
   m_EdgeRadius: 0
 --- !u!1 &1686044792
 GameObject:
@@ -417,8 +417,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686044792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.6466, y: 1.7656, z: 0}
-  m_LocalScale: {x: 59.45988, y: 23.662306, z: 1}
+  m_LocalPosition: {x: 18.411, y: 1.3034, z: 0}
+  m_LocalScale: {x: 49.685028, y: 9.664244, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 687126497}
@@ -476,7 +476,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2093401093
+--- !u!1 &1931847523
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -484,23 +484,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2093401094}
-  - component: {fileID: 2093401096}
-  - component: {fileID: 2093401095}
+  - component: {fileID: 1931847524}
+  - component: {fileID: 1931847526}
+  - component: {fileID: 1931847525}
   m_Layer: 0
-  m_Name: MapCollider
+  m_Name: LevelBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2093401094
+--- !u!4 &1931847524
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093401093}
+  m_GameObject: {fileID: 1931847523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.05999756, y: 0.010000229, z: 2.395942}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -509,33 +509,33 @@ Transform:
   m_Father: {fileID: 687126497}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2093401095
+--- !u!114 &1931847525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093401093}
+  m_GameObject: {fileID: 1931847523}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41e449fad61cc714288c328ac4364a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: eternia1
---- !u!61 &2093401096
+  level: level1
+--- !u!61 &1931847526
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093401093}
+  m_GameObject: {fileID: 1931847523}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 23.035263, y: 1.5778255}
+  m_Offset: {x: 16.971088, y: 1.4077373}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -546,5 +546,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 61.133736, y: 25.09771}
+  m_Size: {x: 49.676537, y: 11.60406}
   m_EdgeRadius: 0
