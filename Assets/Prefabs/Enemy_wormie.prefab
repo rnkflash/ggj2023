@@ -341,8 +341,8 @@ MonoBehaviour:
   - {fileID: 4868093306792404871}
   - {fileID: 4868093305766011252}
   m_Bounds:
-    m_Center: {x: -0.03496957, y: -0.0013687611, z: 0}
-    m_Extent: {x: 2.2300606, y: 1.3286312, z: 0}
+    m_Center: {x: -0.034970045, y: -0.0013687611, z: 0}
+    m_Extent: {x: 2.23006, y: 1.3286312, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 4868093306707682367}
   - component: {fileID: 4868093306707682366}
   - component: {fileID: 4868093306707682365}
+  - component: {fileID: 986429248}
   m_Layer: 0
   m_Name: Enemy_wormie
   m_TagString: Untagged
@@ -518,7 +519,7 @@ Transform:
   m_GameObject: {fileID: 4868093306707682360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.45, y: 9.35, z: -0.047498208}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4868093305852664217}
@@ -561,7 +562,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &986429248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868093306707682360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cea82e03f9717544a4d7864147229be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlipped: 0
 --- !u!1 &4868093306792404864
 GameObject:
   m_ObjectHideFlags: 0

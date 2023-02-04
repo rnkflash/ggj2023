@@ -30,9 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/newlevels/downleft.unity
     guid: fa1dcdab3f352cd488af01a22810a48d
   - enabled: 1
-    path: Assets/Scenes/newlevels/downright.unity
-    guid: 1bafb1c6d7f353346aa02b35f7add525
-  - enabled: 1
     path: Assets/Scenes/newlevels/explosive.unity
     guid: c1cc2f129ca51d9479938a38f05c8417
+  - enabled: 1
+    path: Assets/Scenes/newlevels/downright.unity
+    guid: 1bafb1c6d7f353346aa02b35f7add525
   m_configObjects: {}
