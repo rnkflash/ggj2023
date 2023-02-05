@@ -30,6 +30,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] float fallGravityScale = 1.0f;
     [SerializeField] float groundedGravityScale = 1.0f;
     [SerializeField] bool resetSpeedOnLand = false;
+    private float attackCooldown = 0.25f;
+
 
     private Rigidbody2D controllerRigidbody;
     private Collider2D controllerCollider;
@@ -50,6 +52,7 @@ public class CharacterController2D : MonoBehaviour
     private int animatorGroundedBool;
     private int animatorRunningSpeed;
     private int animatorJumpTrigger;
+    private int animatorAttackTrigger;
 
     private float _attackCooldown;
     private float _attackDamage;
@@ -105,6 +108,7 @@ public class CharacterController2D : MonoBehaviour
         animatorGroundedBool = Animator.StringToHash("Grounded");
         animatorRunningSpeed = Animator.StringToHash("RunningSpeed");
         animatorJumpTrigger = Animator.StringToHash("Jump");
+        animatorAttackTrigger = Animator.StringToHash("Attack");
 
         CanMove = true;
 
@@ -149,6 +153,7 @@ public class CharacterController2D : MonoBehaviour
         UpdateJump();
         //UpdateTailPose();
         UpdateGravityScale();
+        UpdateAttack();
 
         prevVelocity = controllerRigidbody.velocity;
     }
@@ -159,14 +164,21 @@ public class CharacterController2D : MonoBehaviour
     }
     private void UpdateAttack()
     {
-        if (_attackInput == true && t > _attackCooldown)
+        if (_attackInput == true && _attackCooldown <= 0)
         {
+            _attackCooldown = attackCooldown;
+            animator.SetTrigger(animatorAttackTrigger);
+
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_attackPoint.position, 0.5f); // add layer mask
             foreach (var enemy in hitColliders)
             {
                 //enemy.gameObject.Health = -_attackDamage; Add to enemy health
             }         
+        } else {
+            _attackCooldown -= t;
         }
+        _attackInput = false;
+
     }
 
 

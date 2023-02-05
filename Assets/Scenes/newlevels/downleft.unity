@@ -251,6 +251,10 @@ PrefabInstance:
       value: 0.4861271
       objectReference: {fileID: 0}
     - target: {fileID: 4480483432306354099, guid: 585a0c63a736d764b8c8fff0fb2eb217, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999901
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480483432306354099, guid: 585a0c63a736d764b8c8fff0fb2eb217, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.01407295
       objectReference: {fileID: 0}
@@ -991,7 +995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622526295}
   - component: {fileID: 622526294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: altar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
