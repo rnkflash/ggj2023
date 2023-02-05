@@ -32,6 +32,7 @@ public class WormieMoveBehaviour : StateMachineBehaviour
 		if (Vector2.Distance(player.position, rb.position) <= attackRange)
 		{
 			animator.SetTrigger("Attack");
+            SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("wormattack"));
 		}
 
         if (Vector2.Distance(player.position, rb.position) > seeRange)

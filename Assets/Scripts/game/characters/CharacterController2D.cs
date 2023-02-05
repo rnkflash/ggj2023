@@ -30,7 +30,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] float fallGravityScale = 1.0f;
     [SerializeField] float groundedGravityScale = 1.0f;
     [SerializeField] bool resetSpeedOnLand = false;
-    private float attackCooldown = 0.25f;
+    private float attackCooldown = 0.1f;
 
 
     private Rigidbody2D controllerRigidbody;
@@ -169,6 +169,8 @@ public class CharacterController2D : MonoBehaviour
             _attackCooldown = attackCooldown;
             animator.SetTrigger(animatorAttackTrigger);
 
+            SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("attack"));
+
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_attackPoint.position, 0.5f); // add layer mask
             foreach (var enemy in hitColliders)
             {
@@ -176,6 +178,8 @@ public class CharacterController2D : MonoBehaviour
             }         
         } else {
             _attackCooldown -= t;
+            if (_attackCooldown < 0)
+                _attackCooldown = 0;
         }
         _attackInput = false;
 

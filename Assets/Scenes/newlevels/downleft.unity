@@ -2926,6 +2926,10 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 1783
       objectReference: {fileID: 0}
+    - target: {fileID: 5973574737568355723, guid: f94eca5b612db4c42beaf4c7926617dd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5973574738228325668, guid: f94eca5b612db4c42beaf4c7926617dd, type: 3}
       propertyPath: m_Name
       value: Cameras

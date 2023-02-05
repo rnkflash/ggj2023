@@ -6,7 +6,7 @@ public class MenuController : MonoBehaviour
 {
     void Start()
     {
-        //SoundSystem.ChangeTrack(Sounds.Instance.GetAudioClip("georgian_folk_rap"));
+        
     }
 
     void Update()
