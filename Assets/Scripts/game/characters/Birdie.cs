@@ -6,6 +6,8 @@ public class Birdie : MonoBehaviour
 {
     private Transform player;
 
+	[SerializeField] Transform _attackPoint;
+
 	public bool isFlipped = false;
 	private Rigidbody2D rb;
 
@@ -85,5 +87,16 @@ public class Birdie : MonoBehaviour
 			transform.Rotate(0f, 180f, 0f);
 			isFlipped = true;
 		}
+	}
+
+	public void Attack() {
+		SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("birdattack"));
+		LayerMask mask = LayerMask.GetMask("Player");
+		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_attackPoint.position, 0.5f); // add layer mask
+            foreach (var enemy in hitColliders)
+            {
+                enemy.GetComponent<TakeDamage>()?.Hit(10);
+            }         
+
 	}
 }

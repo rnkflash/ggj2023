@@ -77,6 +77,10 @@ public class CharacterController2D : MonoBehaviour
         
     }
 
+    void OnDestroy() {
+        SceneController.Instance.LoadDeathScreen();
+    }
+
     void Start()
     {
 #if UNITY_EDITOR
@@ -169,16 +173,6 @@ public class CharacterController2D : MonoBehaviour
             _attackCooldown = attackCooldown;
             animator.SetTrigger(animatorAttackTrigger);
 
-            SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("attack"));
-
-            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_attackPoint.position, 0.5f); // add layer mask
-            foreach (var enemy in hitColliders)
-            {
-                var takeDamage = enemy.GetComponent<TakeDamage>();
-                if (takeDamage != null)
-                    takeDamage.Hit(_attackDamage);
-                //enemy.gameObject.Health = -_attackDamage; Add to enemy health
-            }         
         } else {
             _attackCooldown -= t;
             if (_attackCooldown < 0)
@@ -303,5 +297,20 @@ public class CharacterController2D : MonoBehaviour
         }
 
         controllerRigidbody.gravityScale = gravityScale;
+    }
+
+    public void Attack() {
+
+            SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("attack"));
+
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_attackPoint.position, 0.5f); // add layer mask
+            foreach (var enemy in hitColliders)
+            {
+                var takeDamage = enemy.GetComponent<TakeDamage>();
+                if (takeDamage != null)
+                    takeDamage.Hit(_attackDamage);
+                //enemy.gameObject.Health = -_attackDamage; Add to enemy health
+            }         
+
     }
 }

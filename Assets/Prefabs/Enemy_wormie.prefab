@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 4868093305852664222}
   - component: {fileID: 4868093305852664223}
   - component: {fileID: 4868093305852664216}
+  - component: {fileID: 8789821045683784285}
   m_Layer: 0
   m_Name: wormie
   m_TagString: Untagged
@@ -366,6 +367,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &8789821045683784285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868093305852664218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17058a51f8825e84f8c34ea814e0de36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4868093306033570391
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,6 +537,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4868093305852664217}
+  - {fileID: 7570115772770635886}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -576,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cea82e03f9717544a4d7864147229be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _attackPoint: {fileID: 7570115772770635886}
 --- !u!114 &3394795679591230372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,4 +668,35 @@ Transform:
   - {fileID: 4868093306143362460}
   m_Father: {fileID: 4868093305151583975}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7634172158026803596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7570115772770635886}
+  m_Layer: 0
+  m_Name: AttakPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7570115772770635886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7634172158026803596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.231, y: -0.817, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4868093306707682367}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

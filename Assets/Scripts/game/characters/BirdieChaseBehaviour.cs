@@ -32,7 +32,6 @@ public class BirdieChaseBehaviour : StateMachineBehaviour
 		if (Vector2.Distance(rb.position, player.position) <= attackRange)
 		{
 			animator.SetTrigger("Attack");
-            SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("birdattack"));
 		}
 
         if (Vector2.Distance(rb.position, player.position) > seeRange)

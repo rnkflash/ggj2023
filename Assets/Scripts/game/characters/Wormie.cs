@@ -5,6 +5,7 @@ using UnityEngine;
 public class Wormie : MonoBehaviour
 {
     private Transform player;
+	[SerializeField] Transform _attackPoint;
 
 	private bool isFlipped = false;
 
@@ -29,5 +30,18 @@ public class Wormie : MonoBehaviour
 			transform.Rotate(0f, 180f, 0f);
 			isFlipped = true;
 		}
+	}
+
+	public void Attack() {
+		SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("wormattack"));
+		LayerMask mask = LayerMask.GetMask("Player");
+		Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_attackPoint.position, 1.0f); // add layer mask
+            foreach (var enemy in hitColliders)
+            {
+                var takeDamage = enemy.GetComponent<TakeDamage>();
+                if (takeDamage != null)
+                    takeDamage.Hit(13);
+            }         
+
 	}
 }
