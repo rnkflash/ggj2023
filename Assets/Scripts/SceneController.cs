@@ -20,6 +20,11 @@ public class SceneController : Singleton<SceneController>
 		await LoadSceneAsync("level2", LoadSceneMode.Single);
 	}
 
+	public async void LoadDeathScreen()
+	{
+		await LoadSceneAsync("lose", LoadSceneMode.Single);
+	}
+
 	private async Task LoadSceneAsync(string sceneName, LoadSceneMode mode)
 	{
 		var loadOp = SceneManager.LoadSceneAsync(sceneName, mode);

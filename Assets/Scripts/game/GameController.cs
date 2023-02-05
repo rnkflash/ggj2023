@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,17 @@ public class GameController : MonoBehaviour
     void Awake() {
         state = GameState.Start;
         playingGameController = GetComponent<PlayingGameController>();
+
+        EventBus<DeathMessage>.Sub(OnDeathMessage);
+    }
+
+    private void OnDeathMessage(DeathMessage message)
+    {
+        SceneController.Instance.LoadDeathScreen();
     }
 
     void OnDestroy() {
-        
+        EventBus<DeathMessage>.Unsub(OnDeathMessage);
     }
     
     private IEnumerator Start()

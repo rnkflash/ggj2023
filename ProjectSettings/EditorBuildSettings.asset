@@ -10,6 +10,9 @@ EditorBuildSettings:
     guid: a5e4ead7022a2fc4a97c8d8a4fe617a5
   - enabled: 1
     path: Assets/Scenes/menu.unity
+    guid: 86d9a1f307d38e24fb96c39472527dbe
+  - enabled: 1
+    path: Assets/Scenes/lose.unity
     guid: ea4d3dbfa396e95459fe8e059e981f0b
   - enabled: 1
     path: Assets/Scenes/win.unity
