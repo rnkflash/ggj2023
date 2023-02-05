@@ -115,7 +115,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: final1_0
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2356
+        width: 1151
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee2e812478ef6849a23f9147f0e0f46
+      internalID: -1271391430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final1_1
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 1745
+        width: 3021
+        height: 1202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90877ae76093f6045b0f9b7fa63199f7
+      internalID: -555513712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final1_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1294
+        width: 1811
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc0ecc965bc1374591d01470e5c3dc4
+      internalID: 2027672202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final1_3
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 1138
+        width: 1585
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ad3207fd6bab34caa27311d04c35d3
+      internalID: -608947147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final1_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 188
+        width: 1649
+        height: 987
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5791c53d634d3ed45862be6d048a18ab
+      internalID: -1305983162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final1_5
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 54
+        width: 3170
+        height: 1027
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58718f9a71bf0643ba7029bf4d27321
+      internalID: 1486867723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: final1_6
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 171
+        width: 195
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec43233e8afe3a45bb96df3a36a3057
+      internalID: -1637008571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +273,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      final1_4: -1305983162
+      final1_2: 2027672202
+      final1_5: 1486867723
+      final1_3: -608947147
+      final1_0: -1271391430
+      final1_1: -555513712
+      final1_6: -1637008571
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
