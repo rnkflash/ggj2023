@@ -19,6 +19,9 @@ public class TakeDamage : MonoBehaviour
     }
 
     public void Hit(int damage) {
+
+        SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("damage"));
+
         var obj = Instantiate(damageNumbersPrefab, new Vector3(transform.position.x, transform.position.y, -2.0f), Quaternion.identity);
         var text = obj.GetComponent<TMPro.TMP_Text>();
         text.text = damage.ToString();

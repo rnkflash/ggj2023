@@ -78,7 +78,8 @@ public class CharacterController2D : MonoBehaviour
     }
 
     void OnDestroy() {
-        SceneController.Instance.LoadDeathScreen();
+        if (GetComponent<TakeDamage>()?.health <= 0)
+            SceneController.Instance.LoadDeathScreen();
     }
 
     void Start()
