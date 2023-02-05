@@ -55,7 +55,7 @@ public class CharacterController2D : MonoBehaviour
     private int animatorAttackTrigger;
 
     private float _attackCooldown;
-    private float _attackDamage;
+    private int _attackDamage = 34;
     float t;
 
     private float _hp;
@@ -174,6 +174,9 @@ public class CharacterController2D : MonoBehaviour
             Collider2D[] hitColliders = Physics2D.OverlapCircleAll(_attackPoint.position, 0.5f); // add layer mask
             foreach (var enemy in hitColliders)
             {
+                var takeDamage = enemy.GetComponent<TakeDamage>();
+                if (takeDamage != null)
+                    takeDamage.Hit(_attackDamage);
                 //enemy.gameObject.Health = -_attackDamage; Add to enemy health
             }         
         } else {
@@ -240,6 +243,8 @@ public class CharacterController2D : MonoBehaviour
 
             // Set animator
             animator.SetTrigger(animatorJumpTrigger);
+
+            SoundSystem.PlaySound(Sounds.Instance.GetAudioClip("jump"));
 
             // We've consumed the jump, reset it.
             jumpInput = false;

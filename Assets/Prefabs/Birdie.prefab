@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 3951532673379593058}
   - component: {fileID: 3951532673379593059}
   - component: {fileID: 3951532673379593057}
+  - component: {fileID: 7944916612104839020}
   m_Layer: 0
   m_Name: Birdie
   m_TagString: Untagged
@@ -150,6 +151,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFlipped: 0
+--- !u!114 &7944916612104839020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3951532673379593053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143c05c651338b845957c45240bb4f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &3951532673394864038
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,8 +365,8 @@ MonoBehaviour:
   - {fileID: 3951532673003406153}
   - {fileID: 3951532673549278327}
   m_Bounds:
-    m_Center: {x: -0.044909596, y: 0.032880068, z: 0}
-    m_Extent: {x: 1.6643608, y: 1.4928802, z: 0}
+    m_Center: {x: -0.044910073, y: 0.03287995, z: 0}
+    m_Extent: {x: 1.6643603, y: 1.4928801, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0

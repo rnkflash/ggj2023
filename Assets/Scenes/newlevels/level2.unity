@@ -727,11 +727,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3951532673379593052, guid: 1b43f276ed2b6624cbda5f53758918e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.05
+      value: -4.39
       objectReference: {fileID: 0}
     - target: {fileID: 3951532673379593052, guid: 1b43f276ed2b6624cbda5f53758918e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.64
+      value: 25.95
       objectReference: {fileID: 0}
     - target: {fileID: 3951532673379593052, guid: 1b43f276ed2b6624cbda5f53758918e0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -769,6 +769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birdie
       objectReference: {fileID: 0}
+    - target: {fileID: 7944916612104839020, guid: 1b43f276ed2b6624cbda5f53758918e0, type: 3}
+      propertyPath: damageNumbersPrefab
+      value: 
+      objectReference: {fileID: 9103256032366336284, guid: 8a81a26f40f02c0489f03e271ed78905, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b43f276ed2b6624cbda5f53758918e0, type: 3}
 --- !u!1 &687126496

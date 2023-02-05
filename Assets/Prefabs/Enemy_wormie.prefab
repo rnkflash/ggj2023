@@ -341,8 +341,8 @@ MonoBehaviour:
   - {fileID: 4868093306792404871}
   - {fileID: 4868093305766011252}
   m_Bounds:
-    m_Center: {x: -0.034970045, y: -0.0013687611, z: 0}
-    m_Extent: {x: 2.23006, y: 1.3286312, z: 0}
+    m_Center: {x: -0.03496957, y: -0.0013687611, z: 0}
+    m_Extent: {x: 2.2300606, y: 1.3286312, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 4868093306707682366}
   - component: {fileID: 4868093306707682365}
   - component: {fileID: 986429248}
+  - component: {fileID: 3394795679591230372}
   m_Layer: 0
   m_Name: Enemy_wormie
   m_TagString: Untagged
@@ -575,7 +576,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cea82e03f9717544a4d7864147229be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFlipped: 0
+--- !u!114 &3394795679591230372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868093306707682360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143c05c651338b845957c45240bb4f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
+  damageNumbersPrefab: {fileID: 9103256032366336284, guid: 8a81a26f40f02c0489f03e271ed78905, type: 3}
 --- !u!1 &4868093306792404864
 GameObject:
   m_ObjectHideFlags: 0
