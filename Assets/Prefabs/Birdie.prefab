@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  damageNumbersPrefab: {fileID: 9103256032366336284, guid: 8a81a26f40f02c0489f03e271ed78905, type: 3}
 --- !u!1 &3951532673394864038
 GameObject:
   m_ObjectHideFlags: 0

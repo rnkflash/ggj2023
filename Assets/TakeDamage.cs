@@ -19,7 +19,7 @@ public class TakeDamage : MonoBehaviour
     }
 
     public void Hit(int damage) {
-        var obj = Instantiate(damageNumbersPrefab, transform.position, transform.rotation);
+        var obj = Instantiate(damageNumbersPrefab, new Vector3(transform.position.x, transform.position.y, -2.0f), transform.rotation);
         var text = obj.GetComponent<TMPro.TMP_Text>();
         text.text = damage.ToString();
 
