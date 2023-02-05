@@ -1,8 +1,6 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.iOS;
 
 public enum GroundType
 {
